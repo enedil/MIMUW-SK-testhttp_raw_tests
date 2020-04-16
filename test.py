@@ -2,7 +2,7 @@
 import sys
 import random
 import pwn
-pwn.context.log_level = 0
+pwn.context.log_level = 0 # wybierz sobie odpowiedni, od -25 (najwięcej info) do 25 (najmniej)
 
 
 binary = './testhttp_raw'
