@@ -12,3 +12,5 @@ Po tym mozna testować:
 ```
 python test.py [app_binary [cookie_file [test_url]]]
 ```
+
+Testy są niekompletne, ale chyba widać jak je można uzupełnić.
