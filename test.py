@@ -19,7 +19,6 @@ if len(sys.argv) > 3:
 valid_cookie = 'status=bored'
 valid_multiple_cookies = 'status=bored;lookingfor=food'
 invalid_cookie1 = 'status~bored'
-invalid_cookie2 = 'status=bored=lazy'
 
 def execute(application_binary, cookie_file, url, server_fn):
     out = None
@@ -57,7 +56,6 @@ def invalid_cookie_cb(con):
     con.readline()
     con.send('HTTP/1.1 200 OK\r\n')
     send_cookie(con, invalid_cookie1)
-    send_cookie(con, invalid_cookie2)
     con.send('Content-Length: 0\r\n')
     con.send('\r\n')
     con.close()
